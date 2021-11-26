@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Task 2</title>
+    <title>Task 2 Grid</title>
     <style>
         *{
             margin: 0;
@@ -27,6 +27,13 @@
             display: flex;
             justify-content: space-between;
         }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        #gridHeader{
+            grid-column : span 3;
+        }
         h1{
             text-align: center;
             margin: 80px 0 60px;
@@ -37,6 +44,7 @@
         #categories{
             justify-content: center;
             margin-bottom: 30px;
+            grid-column: span 3;
         }
         .buttons{
             display: flex;
@@ -133,25 +141,25 @@
         .plan:last-child .footerButton button{
             background-color: #13c4a1;
         }
-
-        
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Choise the pricing plan</h1>
-        <div id="categories" class="flex">
-            <div id="button-1" class="buttons">
-                <i class="fas fa-calendar-check"></i>
-                monthly
+        <div class="grid-container">
+            <div id="gridHeader">
+                <h1>Choise the pricing plan</h1>
             </div>
-            <div id="button-2" class="buttons">
-                <i class="fas fa-calendar-check"></i>
-                yearly
+            <div id="categories" class=" flex">
+                <div id="button-1" class="buttons">
+                    <i class="fas fa-calendar-check"></i>
+                    monthly
+                </div>
+                <div id="button-2" class="buttons">
+                    <i class="fas fa-calendar-check"></i>
+                    yearly
+                </div>
             </div>
-        </div>
-        <div class="flex" id="plans">
-            <div class="plan">
+            <div class="item plan">
                 <h2>Free</h2>
                 <div class="planPrice"><sup>$</sup>0 <span>/monthly</span></div>
                 <ul>
@@ -188,9 +196,9 @@
                     <button><i class="fas fa-fire"></i>try it free now</button>
                 </div>
             </div>
-            <div class="plan">
-                <h2>Starter</h2>
-                <div class="planPrice"><sup>$</sup>49 <span>/monthly</span></div>
+            <div class="item plan">
+                <h2>Free</h2>
+                <div class="planPrice"><sup>$</sup>0 <span>/monthly</span></div>
                 <ul>
                     <li class="flex">
                         <p>Lorem, ipsum dolor.</p>
@@ -225,9 +233,9 @@
                     <button><i class="fas fa-fire"></i>try it free now</button>
                 </div>
             </div>
-            <div class="plan">
-                <h2>Professional</h2>
-                <div class="planPrice"><sup>$</sup>79 <span>/monthly</span></div>
+            <div class="item plan">
+                <h2>Free</h2>
+                <div class="planPrice"><sup>$</sup>0 <span>/monthly</span></div>
                 <ul>
                     <li class="flex">
                         <p>Lorem, ipsum dolor.</p>
@@ -261,6 +269,7 @@
                 <div class="footerButton flex">
                     <button><i class="fas fa-fire"></i>try it free now</button>
                 </div>
+            </div>
             </div>
         </div>
     </div>
